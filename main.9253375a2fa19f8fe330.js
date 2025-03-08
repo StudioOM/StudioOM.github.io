@@ -35044,6 +35044,7 @@ const Asset_15_new_svg_1 = __importDefault(__webpack_require__(/*! ./assets/Asse
 const Asset_44_png_1 = __importDefault(__webpack_require__(/*! ./assets/Asset 44.png */ "./src/assets/Asset 44.png"));
 const Student_drop_in_png_1 = __importDefault(__webpack_require__(/*! ./assets/Student drop in.png */ "./src/assets/Student drop in.png"));
 const Regular_drop_in_png_1 = __importDefault(__webpack_require__(/*! ./assets/Regular drop in.png */ "./src/assets/Regular drop in.png"));
+const Asset_46_png_1 = __importDefault(__webpack_require__(/*! ./assets/Asset 46.png */ "./src/assets/Asset 46.png"));
 class PriceContents extends react_1.Component {
     constructor(props) {
         super(props);
@@ -35072,18 +35073,19 @@ class PriceContents extends react_1.Component {
                         react_2.default.createElement("div", { className: "innerTier" },
                             react_2.default.createElement("img", { src: Regular_drop_in_png_1.default }),
                             react_2.default.createElement("img", { src: Student_drop_in_png_1.default }))),
-                    react_2.default.createElement("div", { className: "tier" },
-                        react_2.default.createElement("img", { className: "tierTitle", src: StudentSpecial_svg_1.default, style: { marginBottom: '60px', marginTop: '30px' } }),
-                        react_2.default.createElement("div", { className: "innerTier", style: { marginBottom: '60px' } },
-                            react_2.default.createElement("div", { className: "studentList" },
-                                react_2.default.createElement("li", null, "access to 120+ classes & events"),
-                                react_2.default.createElement("li", null, "lounge access to study/hangout"),
-                                react_2.default.createElement("li", null, "plant-based food"))))));
+                    react_2.default.createElement("div", { className: "tier", style: { marginBottom: '60px' } },
+                        react_2.default.createElement("img", { className: "tierTitle", src: StudentSpecial_svg_1.default, style: { marginBottom: '60px' } }),
+                        react_2.default.createElement("div", { className: "innerTier" },
+                            react_2.default.createElement("img", { src: Asset_46_png_1.default })),
+                        react_2.default.createElement("div", null,
+                            react_2.default.createElement("li", null, "access to 120+ classes & events"),
+                            react_2.default.createElement("li", null, "lounge access to study/hangout"),
+                            react_2.default.createElement("li", null, "plant-based food")))));
         };
     }
 }
 exports.PriceContents = PriceContents;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUHJpY2VDb250ZW50cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9QcmljZUNvbnRlbnRzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxpQ0FBa0M7QUFDbEMsa0RBQTBCO0FBQzFCLCtFQUE0QztBQUM1Qyx5RUFBcUM7QUFDckMsaUZBQThDO0FBQzlDLDRDQUE0QztBQUM1QyxpRkFBOEM7QUFDOUMsNENBQTRDO0FBQzVDLHFGQUFpRDtBQUNqRCw2Q0FBNkM7QUFDN0Msc0RBQXNEO0FBQ3RELGlGQUFzRDtBQUN0RCx5RUFBaUQ7QUFDakQsdUZBQXdEO0FBQ3hELHVGQUF3RDtBQU94RCxNQUFhLGFBQWMsU0FBUSxpQkFBaUM7SUFDaEUsWUFBWSxLQUF5QjtRQUNqQyxLQUFLLENBQUMsS0FBSyxDQUFDLENBQUM7UUFHakIsV0FBTSxHQUFHLEdBQWdCLEVBQUU7WUFDdkIsT0FBTyx1Q0FBSyxTQUFTLEVBQUMsZUFBZTtnQkFFakMsdUNBQUssU0FBUyxFQUFHLFlBQVk7b0JBQ3pCLHVDQUFLLFNBQVMsRUFBQyxPQUFPLEdBQU87b0JBQzdCLHVDQUFLLFNBQVMsRUFBQyxZQUFZLEVBQUMsR0FBRyxFQUFFLHlCQUFLLEdBQUc7b0JBQ3pDLHVDQUFLLFNBQVMsRUFBQyxPQUFPLEVBQUMsR0FBRyxFQUFFLHNCQUFDLEVBQUUsT0FBTyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsV0FBVyxHQUFHLENBQy9EO2dCQUNOLHVDQUFLLFNBQVMsRUFBQyxVQUFVO29CQUNyQix1Q0FBSyxTQUFTLEVBQUMsTUFBTSxFQUFDLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUU7d0JBQ2pELHVDQUFLLFNBQVMsRUFBQyxXQUFXLEVBQUMsR0FBRyxFQUFFLDBCQUFNLEVBQUUsS0FBSyxFQUFFLEVBQUUsWUFBWSxFQUFFLE1BQU0sRUFBQyxHQUFJO3dCQUMxRSx1Q0FBSyxTQUFTLEVBQUMsV0FBVzs0QkFDdEIsdUNBQUssR0FBRyxFQUFFLHNCQUFhLEdBQUc7NEJBQzFCLHVDQUFLLEdBQUcsRUFBRSwwQkFBYyxFQUFFLEtBQUssRUFBRSxFQUFFLFNBQVMsRUFBRSwrQkFBK0IsRUFBQyxHQUFHLENBQy9FO3dCQUNOOzRCQUNJLGdGQUE0Qzs0QkFDNUMsMkVBQXVDOzRCQUN2QyxzRUFBa0M7NEJBQ2xDLHlFQUFxQzs0QkFDckMsdUVBQW1DOzRCQUNuQyw0RUFBd0M7NEJBQ3hDLHlFQUFxQyxDQUNuQyxDQUNKO29CQUNOLHVDQUFLLFNBQVMsRUFBQyxNQUFNO3dCQUNqQix1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEdBQUcsRUFBRSwwQkFBTSxFQUFFLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUUsR0FBSTt3QkFDM0UsdUNBQUssU0FBUyxFQUFDLFdBQVc7NEJBQ3RCLHVDQUFLLEdBQUcsRUFBRSw2QkFBYSxHQUFHOzRCQUMxQix1Q0FBSyxHQUFHLEVBQUUsNkJBQWEsR0FBRyxDQUN4QixDQUNKO29CQUNOLHVDQUFLLFNBQVMsRUFBQyxNQUFNO3dCQUNqQix1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEdBQUcsRUFBRSw0QkFBTyxFQUFFLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUMsU0FBUyxFQUFFLE1BQU0sRUFBRSxHQUFJO3dCQUM5Rix1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUU7NEJBRXRELHVDQUFLLFNBQVMsRUFBQyxhQUFhO2dDQUN4Qiw0RUFBd0M7Z0NBQ3hDLDJFQUF1QztnQ0FDdkMsNkRBQXlCLENBQ3ZCLENBQ0osQ0FDSixDQUNKLENBQ0osQ0FBQztRQUNYLENBQUMsQ0FBQTtJQS9DRCxDQUFDO0NBZ0RKO0FBbkRELHNDQW1EQyJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUHJpY2VDb250ZW50cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9QcmljZUNvbnRlbnRzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxpQ0FBa0M7QUFDbEMsa0RBQTBCO0FBQzFCLCtFQUE0QztBQUM1Qyx5RUFBcUM7QUFDckMsaUZBQThDO0FBQzlDLDRDQUE0QztBQUM1QyxpRkFBOEM7QUFDOUMsNENBQTRDO0FBQzVDLHFGQUFpRDtBQUNqRCw2Q0FBNkM7QUFDN0Msc0RBQXNEO0FBQ3RELGlGQUFzRDtBQUN0RCx5RUFBaUQ7QUFDakQsdUZBQXdEO0FBQ3hELHVGQUF3RDtBQUN4RCx5RUFBa0Q7QUFNbEQsTUFBYSxhQUFjLFNBQVEsaUJBQWlDO0lBQ2hFLFlBQVksS0FBeUI7UUFDakMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBR2pCLFdBQU0sR0FBRyxHQUFnQixFQUFFO1lBQ3ZCLE9BQU8sdUNBQUssU0FBUyxFQUFDLGVBQWU7Z0JBRWpDLHVDQUFLLFNBQVMsRUFBRyxZQUFZO29CQUN6Qix1Q0FBSyxTQUFTLEVBQUMsT0FBTyxHQUFPO29CQUM3Qix1Q0FBSyxTQUFTLEVBQUMsWUFBWSxFQUFDLEdBQUcsRUFBRSx5QkFBSyxHQUFHO29CQUN6Qyx1Q0FBSyxTQUFTLEVBQUMsT0FBTyxFQUFDLEdBQUcsRUFBRSxzQkFBQyxFQUFFLE9BQU8sRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLFdBQVcsR0FBRyxDQUMvRDtnQkFDTix1Q0FBSyxTQUFTLEVBQUMsVUFBVTtvQkFDckIsdUNBQUssU0FBUyxFQUFDLE1BQU0sRUFBQyxLQUFLLEVBQUUsRUFBRSxZQUFZLEVBQUUsTUFBTSxFQUFFO3dCQUNqRCx1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEdBQUcsRUFBRSwwQkFBTSxFQUFFLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUMsR0FBSTt3QkFDMUUsdUNBQUssU0FBUyxFQUFDLFdBQVc7NEJBQ3RCLHVDQUFLLEdBQUcsRUFBRSxzQkFBYSxHQUFHOzRCQUMxQix1Q0FBSyxHQUFHLEVBQUUsMEJBQWMsRUFBRSxLQUFLLEVBQUUsRUFBRSxTQUFTLEVBQUUsK0JBQStCLEVBQUMsR0FBRyxDQUMvRTt3QkFDTjs0QkFDSSxnRkFBNEM7NEJBQzVDLDJFQUF1Qzs0QkFDdkMsc0VBQWtDOzRCQUNsQyx5RUFBcUM7NEJBQ3JDLHVFQUFtQzs0QkFDbkMsNEVBQXdDOzRCQUN4Qyx5RUFBcUMsQ0FDbkMsQ0FDSjtvQkFDTix1Q0FBSyxTQUFTLEVBQUMsTUFBTTt3QkFDakIsdUNBQUssU0FBUyxFQUFDLFdBQVcsRUFBQyxHQUFHLEVBQUUsMEJBQU0sRUFBRSxLQUFLLEVBQUUsRUFBRSxZQUFZLEVBQUUsTUFBTSxFQUFFLEdBQUk7d0JBQzNFLHVDQUFLLFNBQVMsRUFBQyxXQUFXOzRCQUN0Qix1Q0FBSyxHQUFHLEVBQUUsNkJBQWEsR0FBRzs0QkFDMUIsdUNBQUssR0FBRyxFQUFFLDZCQUFhLEdBQUcsQ0FDeEIsQ0FDSjtvQkFFTix1Q0FBSyxTQUFTLEVBQUMsTUFBTSxFQUFDLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUU7d0JBQ2pELHVDQUFLLFNBQVMsRUFBQyxXQUFXLEVBQUMsR0FBRyxFQUFFLDRCQUFPLEVBQUUsS0FBSyxFQUFFLEVBQUUsWUFBWSxFQUFFLE1BQU0sRUFBQyxHQUFJO3dCQUMzRSx1Q0FBSyxTQUFTLEVBQUMsV0FBVzs0QkFDdEIsdUNBQUssR0FBRyxFQUFFLHNCQUFjLEdBQUcsQ0FDekI7d0JBQ047NEJBQ1EsNEVBQXdDOzRCQUN4QywyRUFBdUM7NEJBQ3ZDLDZEQUF5QixDQUMzQixDQUNKLENBSUosQ0FDSixDQUFDO1FBQ1gsQ0FBQyxDQUFBO0lBbkRELENBQUM7Q0FvREo7QUF2REQsc0NBdURDIn0=
 
 /***/ }),
 
@@ -35920,6 +35922,16 @@ module.exports = __webpack_require__.p + "images/6c1c84f5986c102fb509.png";
 
 /***/ }),
 
+/***/ "./src/assets/Asset 46.png":
+/*!*********************************!*\
+  !*** ./src/assets/Asset 46.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/3d733f1260b8b9ffb2d5.png";
+
+/***/ }),
+
 /***/ "./src/assets/Asset 5.png":
 /*!********************************!*\
   !*** ./src/assets/Asset 5.png ***!
@@ -36173,4 +36185,4 @@ module.exports = __webpack_require__.p + "images/62880fbb725697d5d152.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.42ba7b8f00d64324c244.js.map
+//# sourceMappingURL=main.9253375a2fa19f8fe330.js.map

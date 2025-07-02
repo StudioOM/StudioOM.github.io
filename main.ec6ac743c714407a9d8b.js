@@ -35124,6 +35124,17 @@ const Asset_26_svg_1 = __importDefault(__webpack_require__(/*! ./assets/Asset 26
 class PriceContents extends react_1.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            openTiers: {}
+        };
+        this.toggleTier = (tierKey) => {
+            this.setState(prevState => ({
+                openTiers: {
+                    ...prevState.openTiers,
+                    [tierKey]: !prevState.openTiers[tierKey]
+                }
+            }));
+        };
         this.render = () => {
             return react_2.default.createElement("div", { className: "page-contents" },
                 react_2.default.createElement("div", { className: "pageHeader" },
@@ -35131,35 +35142,39 @@ class PriceContents extends react_1.Component {
                     react_2.default.createElement("img", { className: "ratesTitle", src: Rates_title_png_1.default }),
                     react_2.default.createElement("img", { className: "close", src: X_symbol_png_1.default, onClick: this.props.onBackClick })),
                 react_2.default.createElement("div", { className: "allTiers" },
-                    react_2.default.createElement("div", { className: "tier", style: { marginBottom: '60px' } },
-                        react_2.default.createElement("img", { className: "tierTitle", src: Asset_11_new_svg_1.default, style: { marginBottom: '60px' } }),
-                        react_2.default.createElement("div", { className: "innerTier" },
-                            react_2.default.createElement("img", { src: Asset_24_svg_1.default }),
-                            react_2.default.createElement("img", { src: Asset_25_svg_1.default })),
-                        react_2.default.createElement("div", null,
-                            react_2.default.createElement("li", null, "access to 40+ yoga classes & events"),
-                            react_2.default.createElement("li", null, "lounge access to study/hangout"),
-                            react_2.default.createElement("li", null, "includes yoga mat rentals"),
-                            react_2.default.createElement("li", null, "plant-based food & drinks"),
-                            react_2.default.createElement("li", null, "first week = FREE buddy pass"))),
                     react_2.default.createElement("div", { className: "tier" },
-                        react_2.default.createElement("img", { className: "tierTitle", src: Asset_13_new_svg_1.default, style: { marginBottom: '60px' } }),
-                        react_2.default.createElement("div", { className: "innerTier" },
-                            react_2.default.createElement("img", { src: reg_svg_1.default }),
-                            react_2.default.createElement("img", { src: stud_svg_1.default }))),
+                        react_2.default.createElement("img", { className: "tierTitle", src: Asset_11_new_svg_1.default, onClick: () => this.toggleTier('monthly') }),
+                        this.state.openTiers['monthly'] && (react_2.default.createElement("div", { className: "collapse", style: { marginBottom: '20px' } },
+                            react_2.default.createElement("div", { className: "innerTier" },
+                                react_2.default.createElement("img", { src: Asset_24_svg_1.default }),
+                                react_2.default.createElement("img", { src: Asset_25_svg_1.default })),
+                            react_2.default.createElement("div", { style: { display: 'flex', justifyContent: 'center' } },
+                                react_2.default.createElement("ul", { style: { textAlign: 'left' } },
+                                    react_2.default.createElement("li", null, "access to 40+ yoga classes & events"),
+                                    react_2.default.createElement("li", null, "lounge access to study/hangout"),
+                                    react_2.default.createElement("li", null, "includes yoga mat rentals"),
+                                    react_2.default.createElement("li", null, "plant-based food & drinks"),
+                                    react_2.default.createElement("li", null, "first week = FREE buddy pass")))))),
+                    react_2.default.createElement("div", { className: "tier" },
+                        react_2.default.createElement("img", { className: "tierTitle", src: Asset_13_new_svg_1.default, onClick: () => this.toggleTier('dropin') }),
+                        this.state.openTiers['dropin'] && (react_2.default.createElement("div", { className: "collapse" },
+                            react_2.default.createElement("div", { className: "innerTier" },
+                                react_2.default.createElement("img", { src: reg_svg_1.default }),
+                                react_2.default.createElement("img", { src: stud_svg_1.default }))))),
                     react_2.default.createElement("div", { className: "tier", style: { marginBottom: '60px' } },
-                        react_2.default.createElement("img", { className: "tierTitle", src: StudentSpecial_svg_1.default, style: { marginBottom: '60px' } }),
-                        react_2.default.createElement("div", { className: "innerTier" },
-                            react_2.default.createElement("img", { src: Asset_26_svg_1.default, style: { marginBottom: '60px' } })),
-                        react_2.default.createElement("div", null,
-                            react_2.default.createElement("li", null, "access to 120+ classes & events"),
-                            react_2.default.createElement("li", null, "lounge access to study/hangout"),
-                            react_2.default.createElement("li", null, "plant-based food")))));
+                        react_2.default.createElement("img", { className: "tierTitle", src: StudentSpecial_svg_1.default, onClick: () => this.toggleTier('student') }),
+                        this.state.openTiers['student'] && (react_2.default.createElement("div", { className: "collapse" },
+                            react_2.default.createElement("div", { className: "innerTier" },
+                                react_2.default.createElement("img", { src: Asset_26_svg_1.default })),
+                            react_2.default.createElement("div", null,
+                                react_2.default.createElement("li", null, "access to 120+ classes & events"),
+                                react_2.default.createElement("li", null, "lounge access to study/hangout"),
+                                react_2.default.createElement("li", null, "plant-based food")))))));
         };
     }
 }
 exports.PriceContents = PriceContents;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUHJpY2VDb250ZW50cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9QcmljZUNvbnRlbnRzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxpQ0FBa0M7QUFDbEMsa0RBQTBCO0FBQzFCLCtFQUE0QztBQUM1Qyx5RUFBcUM7QUFDckMsaUZBQThDO0FBQzlDLDRDQUE0QztBQUM1QyxpRkFBOEM7QUFDOUMsNENBQTRDO0FBQzVDLHFGQUFpRDtBQUNqRCw2Q0FBNkM7QUFDN0Msc0RBQXNEO0FBQ3RELHlEQUF5RDtBQUN6RCx5RUFBa0Q7QUFDbEQsb0RBQW9EO0FBQ3BELHlFQUFpRDtBQUVqRCxpRUFBNkM7QUFDN0MsK0RBQTRDO0FBQzVDLHFEQUFxRDtBQUNyRCx5RUFBa0Q7QUFNbEQsTUFBYSxhQUFjLFNBQVEsaUJBQWlDO0lBQ2hFLFlBQVksS0FBeUI7UUFDakMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBR2pCLFdBQU0sR0FBRyxHQUFnQixFQUFFO1lBQ3ZCLE9BQU8sdUNBQUssU0FBUyxFQUFDLGVBQWU7Z0JBRWpDLHVDQUFLLFNBQVMsRUFBRyxZQUFZO29CQUN6Qix1Q0FBSyxTQUFTLEVBQUMsT0FBTyxHQUFPO29CQUM3Qix1Q0FBSyxTQUFTLEVBQUMsWUFBWSxFQUFDLEdBQUcsRUFBRSx5QkFBSyxHQUFHO29CQUN6Qyx1Q0FBSyxTQUFTLEVBQUMsT0FBTyxFQUFDLEdBQUcsRUFBRSxzQkFBQyxFQUFFLE9BQU8sRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLFdBQVcsR0FBRyxDQUMvRDtnQkFDTix1Q0FBSyxTQUFTLEVBQUMsVUFBVTtvQkFDckIsdUNBQUssU0FBUyxFQUFDLE1BQU0sRUFBQyxLQUFLLEVBQUUsRUFBRSxZQUFZLEVBQUUsTUFBTSxFQUFFO3dCQUNqRCx1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEdBQUcsRUFBRSwwQkFBTSxFQUFFLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUMsR0FBSTt3QkFDMUUsdUNBQUssU0FBUyxFQUFDLFdBQVc7NEJBQ3RCLHVDQUFLLEdBQUcsRUFBRSxzQkFBYSxHQUFHOzRCQUMxQix1Q0FBSyxHQUFHLEVBQUUsc0JBQWMsR0FBSSxDQUMxQjt3QkFDTjs0QkFDSSxnRkFBNEM7NEJBQzVDLDJFQUF1Qzs0QkFDdkMsc0VBQWtDOzRCQUNsQyxzRUFBa0M7NEJBQ2xDLHlFQUFxQyxDQUtuQyxDQUNKO29CQUNOLHVDQUFLLFNBQVMsRUFBQyxNQUFNO3dCQUNqQix1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEdBQUcsRUFBRSwwQkFBTSxFQUFFLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUUsR0FBSTt3QkFDM0UsdUNBQUssU0FBUyxFQUFDLFdBQVc7NEJBQ3RCLHVDQUFLLEdBQUcsRUFBRSxpQkFBYSxHQUFHOzRCQUMxQix1Q0FBSyxHQUFHLEVBQUUsa0JBQWEsR0FBRyxDQUN4QixDQUNKO29CQUVOLHVDQUFLLFNBQVMsRUFBQyxNQUFNLEVBQUMsS0FBSyxFQUFFLEVBQUUsWUFBWSxFQUFFLE1BQU0sRUFBRTt3QkFDakQsdUNBQUssU0FBUyxFQUFDLFdBQVcsRUFBQyxHQUFHLEVBQUUsNEJBQU8sRUFBRSxLQUFLLEVBQUUsRUFBRSxZQUFZLEVBQUUsTUFBTSxFQUFDLEdBQUk7d0JBQzNFLHVDQUFLLFNBQVMsRUFBQyxXQUFXOzRCQUN0Qix1Q0FBSyxHQUFHLEVBQUUsc0JBQWMsRUFBRSxLQUFLLEVBQUUsRUFBRSxZQUFZLEVBQUUsTUFBTSxFQUFDLEdBQUcsQ0FDekQ7d0JBQ047NEJBQ1EsNEVBQXdDOzRCQUN4QywyRUFBdUM7NEJBQ3ZDLDZEQUF5QixDQUMzQixDQUNKLENBSUosQ0FDSixDQUFDO1FBQ1gsQ0FBQyxDQUFBO0lBckRELENBQUM7Q0FzREo7QUF6REQsc0NBeURDIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUHJpY2VDb250ZW50cy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9QcmljZUNvbnRlbnRzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxpQ0FBa0M7QUFDbEMsa0RBQTBCO0FBQzFCLCtFQUE0QztBQUM1Qyx5RUFBcUM7QUFDckMsaUZBQThDO0FBQzlDLDRDQUE0QztBQUM1QyxpRkFBOEM7QUFDOUMsNENBQTRDO0FBQzVDLHFGQUFpRDtBQUNqRCw2Q0FBNkM7QUFDN0Msc0RBQXNEO0FBQ3RELHlEQUF5RDtBQUN6RCx5RUFBa0Q7QUFDbEQsb0RBQW9EO0FBQ3BELHlFQUFpRDtBQUVqRCxpRUFBNkM7QUFDN0MsK0RBQTRDO0FBQzVDLHFEQUFxRDtBQUNyRCx5RUFBa0Q7QUFZbEQsTUFBYSxhQUFjLFNBQVEsaUJBQWlEO0lBY2hGLFlBQVksS0FBeUI7UUFDakMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBZGpCLFVBQUssR0FBdUI7WUFDeEIsU0FBUyxFQUFFLEVBQUU7U0FDaEIsQ0FBQztRQUVGLGVBQVUsR0FBRyxDQUFDLE9BQWUsRUFBRSxFQUFFO1lBQzdCLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLEVBQUUsQ0FBQyxDQUFDO2dCQUN4QixTQUFTLEVBQUU7b0JBQ1AsR0FBRyxTQUFTLENBQUMsU0FBUztvQkFDdEIsQ0FBQyxPQUFPLENBQUMsRUFBRSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDO2lCQUMzQzthQUNKLENBQUMsQ0FBQyxDQUFDO1FBQ1IsQ0FBQyxDQUFDO1FBTUYsV0FBTSxHQUFHLEdBQWdCLEVBQUU7WUFDdkIsT0FBTyx1Q0FBSyxTQUFTLEVBQUMsZUFBZTtnQkFFakMsdUNBQUssU0FBUyxFQUFHLFlBQVk7b0JBQ3pCLHVDQUFLLFNBQVMsRUFBQyxPQUFPLEdBQU87b0JBQzdCLHVDQUFLLFNBQVMsRUFBQyxZQUFZLEVBQUMsR0FBRyxFQUFFLHlCQUFLLEdBQUc7b0JBQ3pDLHVDQUFLLFNBQVMsRUFBQyxPQUFPLEVBQUMsR0FBRyxFQUFFLHNCQUFDLEVBQUUsT0FBTyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsV0FBVyxHQUFHLENBQy9EO2dCQUNOLHVDQUFLLFNBQVMsRUFBQyxVQUFVO29CQUNyQix1Q0FBSyxTQUFTLEVBQUMsTUFBTTt3QkFDakIsdUNBQUssU0FBUyxFQUFDLFdBQVcsRUFBQyxHQUFHLEVBQUUsMEJBQU0sRUFBRSxPQUFPLEVBQUUsR0FBRyxFQUFFLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsR0FBSTt3QkFDcEYsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUksQ0FDcEMsdUNBQUssU0FBUyxFQUFDLFVBQVUsRUFBQyxLQUFLLEVBQUUsRUFBQyxZQUFZLEVBQUUsTUFBTSxFQUFDOzRCQUV2RCx1Q0FBSyxTQUFTLEVBQUMsV0FBVztnQ0FDdEIsdUNBQUssR0FBRyxFQUFFLHNCQUFhLEdBQUc7Z0NBQzFCLHVDQUFLLEdBQUcsRUFBRSxzQkFBYyxHQUFJLENBQzFCOzRCQUNOLHVDQUFLLEtBQUssRUFBRSxFQUFHLE9BQU8sRUFBRSxNQUFNLEVBQUUsY0FBYyxFQUFFLFFBQVEsRUFBRTtnQ0FDdEQsc0NBQUksS0FBSyxFQUFFLEVBQUUsU0FBUyxFQUFFLE1BQU0sRUFBRTtvQ0FDNUIsZ0ZBQTRDO29DQUM1QywyRUFBdUM7b0NBQ3ZDLHNFQUFrQztvQ0FDbEMsc0VBQWtDO29DQUNsQyx5RUFBcUMsQ0FDcEMsQ0FDSCxDQUNBLENBQ0wsQ0FDQztvQkFDTix1Q0FBSyxTQUFTLEVBQUMsTUFBTTt3QkFFYix1Q0FBSyxTQUFTLEVBQUMsV0FBVyxFQUFDLEdBQUcsRUFBRSwwQkFBTSxFQUFFLE9BQU8sRUFBRSxHQUFHLEVBQUUsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxHQUFJO3dCQUNuRixJQUFJLENBQUMsS0FBSyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUNuQyx1Q0FBSyxTQUFTLEVBQUMsVUFBVTs0QkFDekIsdUNBQUssU0FBUyxFQUFDLFdBQVc7Z0NBQ3RCLHVDQUFLLEdBQUcsRUFBRSxpQkFBYSxHQUFHO2dDQUMxQix1Q0FBSyxHQUFHLEVBQUUsa0JBQWEsR0FBRyxDQUN4QixDQUNKLENBQ0QsQ0FDSDtvQkFFTix1Q0FBSyxTQUFTLEVBQUMsTUFBTSxFQUFDLEtBQUssRUFBRSxFQUFFLFlBQVksRUFBRSxNQUFNLEVBQUU7d0JBRTdDLHVDQUFLLFNBQVMsRUFBQyxXQUFXLEVBQUMsR0FBRyxFQUFFLDRCQUFPLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEdBQUk7d0JBQ3JGLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQ3BDLHVDQUFLLFNBQVMsRUFBQyxVQUFVOzRCQUN6Qix1Q0FBSyxTQUFTLEVBQUMsV0FBVztnQ0FDMUIsdUNBQUssR0FBRyxFQUFFLHNCQUFjLEdBQUksQ0FDdEI7NEJBQ047Z0NBQ1EsNEVBQXdDO2dDQUN4QywyRUFBdUM7Z0NBQ3ZDLDZEQUF5QixDQUMzQixDQUNKLENBQ0QsQ0FDSCxDQUlKLENBQ0osQ0FBQztRQUNYLENBQUMsQ0FBQTtJQWxFRCxDQUFDO0NBbUVKO0FBbkZELHNDQW1GQyJ9
 
 /***/ }),
 
@@ -36765,4 +36780,4 @@ module.exports = __webpack_require__.p + "images/62880fbb725697d5d152.png";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.cef588755cc85dfb9ea9.js.map
+//# sourceMappingURL=main.ec6ac743c714407a9d8b.js.map
